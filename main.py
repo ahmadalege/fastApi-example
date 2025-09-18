@@ -57,7 +57,6 @@ class PaginatedResponse(BaseModel, Generic[T]):
     data: T
     next: Optional[str]
     prev: Optional[str]
-    count: int
 
 
 @app.get("/campaigns", response_model=PaginatedResponse[list[Campaign]])
